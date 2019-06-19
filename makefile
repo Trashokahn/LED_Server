@@ -1,6 +1,6 @@
-prog: LED.o
-	gcc -o LED.o lwiringPi lpthread
+prog: LEDServer.o
+	gcc -o prog LEDServer.o -lwiringPi -lpthread
 
-LED.o: LEDServer.c
+LEDServer.o: LEDServer.c
 	gcc -c LEDServer.c
 

@@ -8,7 +8,7 @@
 
 
 #define BUFSIZE 1000
-#define PORT 396
+#define PORT 4000
 #define QUEUE 3	//Warteschlange fuer Verbindungen
 
 void writeLEDs(int state[4]);
@@ -26,6 +26,7 @@ void *LEDControl(void* arg){
 		
 		//wenn q gedrückt wird die Verbindung getrennt
 		if(inbuffer[0] == 'q'){
+			writeLEDs(0);
 			break;
 		}
 		
